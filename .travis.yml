@@ -7,7 +7,7 @@ install:
   - sudo apt-get update
   - sudo apt-get install libgomp1
 script:
-  - cd src/source & make -f ./Makefile_cpu
+  - make -f ./src/source/Makefile_cpu
 
 notifications:
   email: false
