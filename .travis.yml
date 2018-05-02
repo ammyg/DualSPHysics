@@ -1,0 +1,12 @@
+sudo: false
+
+language:
+  - cpp
+
+install:
+  - sudo apt-get install g++-4.9 libgomp1
+script:
+  - cd src/source & make -f Makefile_cpu
+
+notifications:
+  email: false
