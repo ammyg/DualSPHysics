@@ -4,12 +4,14 @@ language:
   - cpp
 
 install:
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
   - sudo apt-get update
-  - sudo apt-get install libgomp1
+  - sudo apt-get install libgomp1 g++-4.9
+  
 script:
   - cd ./src/source
   - ls
-  - make -f ./Makefile_cpu
+  - make CC=g++-4.9 CPP=g++-4.9 CXX=g++-4.9 LD=g++-4.9 -f ./Makefile_cpu
 
 notifications:
   email: false
