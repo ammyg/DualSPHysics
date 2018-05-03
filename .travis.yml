@@ -4,8 +4,9 @@ language:
   - cpp
 
 install:
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update
-  - sudo apt-get install libgomp1 g++-4.9
+  - sudo apt-get install libgomp1 g++-4.9 -y
   
 script:
   - cd ./src/source
